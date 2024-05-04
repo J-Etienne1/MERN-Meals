@@ -1,21 +1,32 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors'); // To handle CORS if needed
+const express = require("express");
+const mongoose = require("mongoose");
+//const cors = require("cors"); // To handle CORS if needed
 
 const app = express();
 
+// DB Config
+const db = require("./config/keys").mongoURI;
+
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://jasonetienne1:cEx2JgGQNemrLncN@cluster0.zame8h0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose
+  .connect(db)
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log(err));
 
-// Define data models (Ingredient and Recipe) using Mongoose schemas
 
+
+// TO DO
+//Define data models (Ingredient and Recipe) using Mongoose schemas
+
+
+// TO DO
 // Define API endpoints (using Express routes)
-app.get('/recipes', async (req, res) => {
+app.get("/recipes", async (req, res) => {
   // Handle recipe retrieval logic based on user ingredients
 });
 
+
+const port = process.env.PORT || 5000;
+
 // Start the server
-app.listen(5000, () => console.log('Server listening on port 5000'));
+app.listen(port, () => console.log(`Server listening on port ${port}` ));

@@ -12,6 +12,7 @@
   "dependencies": {
     "create-react-app": "^1.2.1",
     "express": "^4.19.2",
+    "mongodb": "^6.6.0",
     "mongoose": "^8.3.3"
   }
 }

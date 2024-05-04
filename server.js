@@ -5,7 +5,7 @@ const cors = require('cors'); // To handle CORS if needed
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mern-meals', {
+mongoose.connect('mongodb+srv://jasonetienne1:cEx2JgGQNemrLncN@cluster0.zame8h0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
